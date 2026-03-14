@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Drop | Questionnaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="questions.css" />
+</head>
+<body class="questionnaire-body">
+  <header class="questionnaire-header">
+    <a href="/" class="logo logo--dark">
+      <svg class="logo-icon" viewBox="0 0 24 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 7.5 12 18 12 18S24 19.5 24 12C24 5.373 18.627 0 12 0zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+      </svg>
+      <span>date drop.</span>
+    </a>
+    <div class="header-copy">
+      <p class="eyebrow">Profile setup</p>
+      <h1>Tell us about yourself.</h1>
+      <p id="emailBadge" class="email-badge"></p>
+    </div>
+  </header>
+
+  <main class="questionnaire-shell">
+    <section class="progress-panel">
+      <div class="progress-meta">
+        <span id="progressLabel">Step 1 of 6</span>
+        <span id="progressPercent">17%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </section>
+
+    <form id="questionnaireForm" class="questionnaire-card">
+      <section class="step is-active" data-step="1">
+        <div class="step-heading">
+          <p class="step-kicker">Basics</p>
+          <h2>Identity and matching basics</h2>
+          <p>These questions mirror the first part of the Date Drop onboarding flow.</p>
+        </div>
+
+        <div class="field-grid two-up">
+          <label class="field">
+            <span>Full name</span>
+            <input type="text" name="fullName" placeholder="Your full name" required />
+          </label>
+
+          <fieldset class="field">
+            <legend>Gender</legend>
+            <div class="choice-row">
+              <label class="pill-option"><input type="radio" name="gender" value="f" required /><span>F</span></label>
+              <label class="pill-option"><input type="radio" name="gender" value="m" /><span>M</span></label>
+              <label class="pill-option"><input type="radio" name="gender" value="nb" /><span>NB</span></label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span>Major 1</span>
+            <input type="text" name="majorOne" placeholder="Economics" required />
+          </label>
+
+          <label class="field">
+            <span>Major 2 (optional)</span>
+            <input type="text" name="majorTwo" placeholder="Computer science" />
+          </label>
+
+          <label class="field">
+            <span>Race</span>
+            <select name="race" required>
+              <option value="">Select one</option>
+              <option>Asian</option>
+              <option>Black</option>
+              <option>Latino / Hispanic</option>
+              <option>Middle Eastern</option>
+              <option>Native / Indigenous</option>
+              <option>South Asian</option>
+              <option>White</option>
+              <option>Mixed</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Preferred race in a partner</span>
+            <input type="text" name="preferredRace" placeholder="No preference / describe preferences" />
+          </label>
+
+          <label class="field field--full">
+            <span>Race dealbreakers (optional)</span>
+            <textarea name="raceDealbreakers" rows="3" placeholder="Anything you'd prefer to filter out?"></textarea>
+          </label>
+
+          <label class="field">
+            <span>Height</span>
+            <input type="number" name="height" min="140" max="220" placeholder="cm" required />
+          </label>
+
+          <div class="field">
+            <span>Preferred height range</span>
+            <div class="range-pair">
+              <label><span>Min</span><input type="number" name="preferredHeightMin" min="140" max="220" value="155" /></label>
+              <label><span>Max</span><input type="number" name="preferredHeightMax" min="140" max="220" value="190" /></label>
+            </div>
+          </div>
+
+          <fieldset class="field field--full">
+            <legend>What are you looking for?</legend>
+            <div class="stacked-options">
+              <label class="stacked-option"><input type="radio" name="relationshipGoal" value="Life partner" required /><span>Life partner</span></label>
+              <label class="stacked-option"><input type="radio" name="relationshipGoal" value="Long-term relationship" /><span>Long-term relationship</span></label>
+              <label class="stacked-option"><input type="radio" name="relationshipGoal" value="Long-term relationship, open to short" /><span>Long-term relationship, open to short</span></label>
+              <label class="stacked-option"><input type="radio" name="relationshipGoal" value="Short-term relationship, open to long" /><span>Short-term relationship, open to long</span></label>
+              <label class="stacked-option"><input type="radio" name="relationshipGoal" value="Short-term relationship" /><span>Short-term relationship</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="step" data-step="2">
+        <div class="step-heading">
+          <p class="step-kicker">Preferences</p>
+          <h2>Age, graduation, religion, and values</h2>
+          <p>We also included the two “I want to be a ____ person” grids from your screenshots.</p>
+        </div>
+
+        <div class="field-grid two-up">
+          <label class="field">
+            <span>Date of birth</span>
+            <input type="date" name="birthDate" required />
+          </label>
+
+          <div class="field">
+            <span>Preferred age range</span>
+            <div class="range-pair">
+              <label><span>Min</span><input type="number" name="preferredAgeMin" min="18" max="60" value="18" /></label>
+              <label><span>Max</span><input type="number" name="preferredAgeMax" min="18" max="60" value="26" /></label>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Graduation year</span>
+            <select name="gradYear" required>
+              <option value="">Select one</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Preferred graduation-year range</span>
+            <select name="gradPreference" required>
+              <option value="">Select one</option>
+              <option>Same year only</option>
+              <option>Within 1 year</option>
+              <option>Within 2 years</option>
+              <option>No preference</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Religion</span>
+            <input type="text" name="religion" placeholder="Agnostic, Buddhist, Christian..." />
+          </label>
+
+          <label class="field">
+            <span>Preferred religion in partner</span>
+            <input type="text" name="preferredReligion" placeholder="No preference / describe" />
+          </label>
+
+          <label class="field field--full">
+            <span>List a few things you'd like to do on a date</span>
+            <textarea name="dateIdeas" rows="3" placeholder="Coffee walk, museum date, late-night noodles..."></textarea>
+          </label>
+        </div>
+
+        <div class="selection-card">
+          <div class="selection-card__header">
+            <h3>I want to be a ____ person</h3>
+            <p>Select up to 5.</p>
+          </div>
+          <div id="selfTraits" class="chip-grid"></div>
+        </div>
+
+        <div class="selection-card">
+          <div class="selection-card__header">
+            <h3>I want my partner to be a ____ person</h3>
+            <p>Select up to 5.</p>
+          </div>
+          <div id="partnerTraits" class="chip-grid"></div>
+        </div>
+      </section>
+
+      <section class="step" data-step="3">
+        <div class="step-heading">
+          <p class="step-kicker">Beliefs</p>
+          <h2>Big-picture compatibility questions</h2>
+          <p>Rate each from 1 to 7, from strongly disagree to strongly agree.</p>
+        </div>
+        <div id="scaleGroupOne" class="scale-list"></div>
+      </section>
+
+      <section class="step" data-step="4">
+        <div class="step-heading">
+          <p class="step-kicker">Lifestyle</p>
+          <h2>Habits, politics, and relationship style</h2>
+          <p>These are the longer slider prompts from the middle screenshots.</p>
+        </div>
+        <div id="scaleGroupTwo" class="scale-list"></div>
+      </section>
+
+      <section class="step" data-step="5">
+        <div class="step-heading">
+          <p class="step-kicker">Wrap-up</p>
+          <h2>Final profile details</h2>
+          <p>This section follows the last screenshot: social proof, photo, and commitment.</p>
+        </div>
+
+        <div id="scaleGroupThree" class="scale-list"></div>
+
+        <div class="field-grid two-up">
+          <label class="field field--full">
+            <span>Close friends to invite (up to 5, comma-separated)</span>
+            <textarea name="friends" rows="3" placeholder="Alice, Ben, Chen, Divya, Eli"></textarea>
+          </label>
+
+          <label class="field field--full">
+            <span>Upload profile picture</span>
+            <input type="file" id="photoUpload" accept="image/*" />
+          </label>
+
+          <div id="photoPreview" class="photo-preview" hidden>
+            <img id="photoPreviewImage" alt="Profile preview" />
+          </div>
+        </div>
+      </section>
+
+      <section class="step" data-step="6">
+        <div class="step-heading">
+          <p class="step-kicker">Logistics</p>
+          <h2>Phone confirmation and finish</h2>
+          <p>The original flow ends with a QR-based phone confirmation. For now, this page keeps the structure but finishes locally.</p>
+        </div>
+
+        <div class="logistics-card">
+          <div class="qr-placeholder">
+            <div class="qr-grid"></div>
+          </div>
+          <div class="logistics-copy">
+            <h3>Verify your phone</h3>
+            <p>Send us a quick text to verify your number and save our contact. We’ll add the real QR / SMS step later.</p>
+            <label class="field">
+              <span>Phone number</span>
+              <input type="tel" name="phoneNumber" placeholder="+86 138 0000 0000" />
+            </label>
+            <label class="field">
+              <span>Anything else you'd like your match to know?</span>
+              <textarea name="finalNotes" rows="4" placeholder="Optional notes, dealbreakers, or fun facts"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <div class="complete-panel" id="completePanel" hidden>
+          <h3>Profile complete</h3>
+          <p>Your answers are being saved. You will be redirected to your home page.</p>
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <button type="button" id="prevBtn" class="btn-ghost">Back</button>
+        <button type="button" id="nextBtn" class="btn-primary">Continue</button>
+        <button type="submit" id="submitBtn" class="btn-primary" hidden>Finish profile</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="questions.js"></script>
+</body>
+</html>

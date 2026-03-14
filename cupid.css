@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #2b1d1d;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cupid-body {
+  min-height: 100vh;
+}
+
+.topbar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lora', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 34px;
+}
+
+.logo--dark {
+  color: #1f1616;
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-family: 'Lora', serif;
+  font-size: 1.6rem;
+  color: #8e3e4e;
+}
+
+.menu a {
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.menu a.is-active {
+  background: #f6d9de;
+  color: #4f1f2a;
+}
+
+.signout-btn {
+  border: 1px solid #d9d2d2;
+  border-radius: 999px;
+  padding: 14px 28px;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cupid-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 24px 50px;
+}
+
+.cupid-hero {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(73, 91, 133, 0.28), rgba(71, 98, 143, 0.58)),
+    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 620px;
+}
+
+.cupid-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.22));
+}
+
+.cupid-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 30px 42px 34px;
+  max-width: 740px;
+}
+
+.cupid-hero h1 {
+  margin: 0 0 10px;
+  font-family: 'Lora', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.cupid-hero p {
+  margin: 0 0 22px;
+  max-width: 620px;
+  font-size: clamp(1rem, 2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cupid-form {
+  display: grid;
+  gap: 14px;
+  max-width: 620px;
+}
+
+.cupid-form input {
+  height: 66px;
+  border: none;
+  border-radius: 18px;
+  padding: 0 20px;
+  font-size: 2rem;
+  color: #292929;
+}
+
+.cupid-form input::placeholder {
+  color: #8f8f8f;
+}
+
+.search-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.ship-btn {
+  width: fit-content;
+  border: 1px solid #5a0f17;
+  border-radius: 999px;
+  padding: 14px 26px;
+  background: #861625;
+  color: #fff;
+  font-size: 1.9rem;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ship-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ship-status {
+  min-height: 1.4em;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff2d8;
+}
+
+.cupid-slots {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+}
+
+.slot {
+  min-height: 206px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1px);
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.leaderboard {
+  margin-top: 34px;
+  border-radius: 30px;
+  padding: 28px 34px 36px;
+  background: #ffeef0;
+  border: 1px solid #f2d5da;
+}
+
+.leaderboard h2 {
+  margin: 0 0 22px;
+  font-family: 'Lora', serif;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  text-align: left;
+  padding: 16px 10px;
+}
+
+.leaderboard thead th {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eac2cb;
+}
+
+.leaderboard tbody td {
+  font-size: 1.2rem;
+}
+
+.leaderboard th:last-child,
+.leaderboard td:last-child {
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cupid-form input {
+    font-size: 1.15rem;
+    height: 54px;
+  }
+
+  .ship-btn {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .menu {
+    font-size: 1.1rem;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .signout-btn {
+    padding: 10px 16px;
+  }
+
+  .cupid-shell {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .cupid-hero-content {
+    padding: 22px 20px 24px;
+  }
+
+  .cupid-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .slot {
+    min-height: 120px;
+    font-size: 2rem;
+  }
+
+  .leaderboard {
+    padding: 18px 18px 24px;
+  }
+
+  .leaderboard tbody td {
+    font-size: 1rem;
+  }
+}

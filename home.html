@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Drop | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body class="home-body">
+  <header class="topbar">
+    <a href="/home" class="logo logo--dark">
+      <svg class="logo-icon" viewBox="0 0 24 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 7.5 12 18 12 18S24 19.5 24 12C24 5.373 18.627 0 12 0zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+      </svg>
+      <span>date drop.</span>
+    </a>
+
+    <nav class="menu">
+      <a href="/home">Home</a>
+      <a href="/cupid">Cupid</a>
+      <a href="/home" class="is-active">Matches</a>
+      <a href="#">Profile</a>
+    </nav>
+
+    <button class="signout-btn" type="button" onclick="window.location.href='/'">Sign Out</button>
+  </header>
+
+  <main class="home-shell">
+    <section class="matches-hero">
+      <h1>Matches</h1>
+    </section>
+
+    <section class="empty-state-card">
+      <div class="polaroid">
+        <div class="polaroid-photo"></div>
+      </div>
+      <h2>No matches yet</h2>
+      <p>Your match history will show up here</p>
+    </section>
+  </main>
+</body>
+</html>

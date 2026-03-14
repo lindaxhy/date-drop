@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Drop | Go on dates without swiping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <nav class="nav">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 7.5 12 18 12 18S24 19.5 24 12C24 5.373 18.627 0 12 0zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        </svg>
+        <span>date drop.</span>
+      </a>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-headline">Date without swiping.<br />For your campus.</h1>
+      <p class="hero-sub">Verify your campus email to get started.</p>
+      <div class="hero-form" id="authForm">
+        <input
+          type="email"
+          id="emailInput"
+          class="email-input"
+          placeholder="you@stu.pku.edu.cn or you@mails.tsinghua.edu.cn"
+          required
+        />
+        <button id="sendCodeBtn" class="btn-start" disabled>Get started</button>
+        <p class="form-hint">Use your campus email to start the questionnaire. We'll add full email verification later.</p>
+        <p id="statusMessage" class="status-message" aria-live="polite"></p>
+      </div>
+      <p class="press-line">
+        Featured in
+        <a href="https://wsj.com" target="_blank" rel="noopener">The Wall Street Journal</a>,
+        <a href="https://stanforddaily.com" target="_blank" rel="noopener">Stanford Daily</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works">
+    <h2 class="section-heading">How it works</h2>
+
+    <div class="cards">
+
+      <!-- Card 1: Tell us about yourself -->
+      <div class="card card--tell-us">
+        <div class="card-bg card-bg--night"></div>
+        <div class="card-inner">
+          <div class="card-text">
+            <h3>Tell us about yourself</h3>
+            <p>Your core values, interests, and what matters to you</p>
+          </div>
+          <div class="card-mockup mockup--profile">
+            <div class="mockup-card">
+              <p class="mockup-question">Having children is essential for a fulfilling life</p>
+              <div class="rating-row">
+                <span class="rating-label">Hard pass 🚫</span>
+                <div class="rating-buttons">
+                  <button class="rating-btn">1</button>
+                  <button class="rating-btn">2</button>
+                  <button class="rating-btn">3</button>
+                  <button class="rating-btn">4</button>
+                  <button class="rating-btn active">5</button>
+                  <button class="rating-btn">6</button>
+                  <button class="rating-btn">7</button>
+                </div>
+                <span class="rating-label">It's my dream 😍</span>
+              </div>
+              <p class="mockup-values-label">My top 4 core values:</p>
+              <div class="values-grid">
+                <label class="value-check checked"><input type="checkbox" checked /><span>Adventure</span></label>
+                <label class="value-check"><input type="checkbox" /><span>Ambition</span></label>
+                <label class="value-check"><input type="checkbox" /><span>Courage</span></label>
+                <label class="value-check checked"><input type="checkbox" checked /><span>Creativity</span></label>
+                <label class="value-check checked"><input type="checkbox" checked /><span>Curiosity</span></label>
+                <label class="value-check"><input type="checkbox" /><span>Discipline</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Opt in weekly -->
+      <div class="card card--opt-in">
+        <div class="card-bg card-bg--fields"></div>
+        <div class="card-inner">
+          <div class="card-text">
+            <h3>Opt in weekly</h3>
+            <p>Opt in before the weekly deadline, and we'll send you a match with a note on why we think you'll click</p>
+          </div>
+          <div class="card-mockup mockup--match">
+            <div class="mockup-card match-card">
+              <h4>Your match: Alex</h4>
+              <p class="match-detail">📧 alex99@university.edu</p>
+              <p class="match-detail">🎯 99.3% compatibility</p>
+              <p class="match-why"><strong>Here's why:</strong></p>
+              <ul class="match-reasons">
+                <li>"Curiosity" and "Adventure" both made your top 4 core values</li>
+                <li>They also want someone who calls them out on their bullshit (lovingly)</li>
+                <li>You each value independence but still prioritize keeping in touch</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Go on a date -->
+      <div class="card card--date">
+        <div class="card-bg card-bg--couple"></div>
+        <div class="card-inner card-inner--date">
+          <div class="card-text">
+            <h3>Go on a date!</h3>
+            <p>We give you their email. You figure out the rest - meet up, grab coffee, and maybe touch some grass</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <a href="#" class="logo logo--light">
+        <svg class="logo-icon" viewBox="0 0 24 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 7.5 12 18 12 18S24 19.5 24 12C24 5.373 18.627 0 12 0zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        </svg>
+        <span>date drop.</span>
+      </a>
+      <p class="footer-copy">© 2026 The Relationship Company, a public benefit corporation</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5 class="footer-col-heading">COMPANY</h5>
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">The Relationship Company</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5 class="footer-col-heading">STATE OF DATING</h5>
+        <a href="#">Penn</a>
+        <a href="#">Stanford</a>
+        <a href="#">Princeton</a>
+        <a href="#">MIT</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
